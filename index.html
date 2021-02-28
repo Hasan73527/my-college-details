@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ASSINGMENT-2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Onepage Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	    
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+</head>
+<body>
+<div class="header" id="head">	
+      <div class="container"> 
+         <div class="header-top">
+      		 <div class="logo">
+				<a href="index.html"><img src="images/logoo.jpeg" alt=""/></a>
+			 </div>
+		   <div class="top-menu">
+		   	<span class="menu"> </span>
+			<ul>
+			 	<nav class="cl-effect-5">
+				<li><a class="active" href="index.html"><span data-hover="Home">home</span></a></li>
+				<li><a href="#about" class="scroll"><span data-hover="about">about</span></a></li>
+				<li><a href="#REG" class="scroll"><span data-hover="REG"><span>REG</span></a></li>
+				<li><a href="#LOGIN" class="scroll"><span data-hover="LOGIN">LOGIN</span></a></li>
+				<li><a href="#contact" class="scroll"><span data-hover="contact">contact</span></a></li>
+				</nav>
+			 </ul>
+			 </div>
+			 <!--script-nav-->
+		 <script>
+		 $("span.menu").click(function(){
+		 $(".top-menu ul").slideToggle("slow" , function(){
+		 });
+		 });
+		 </script>
+			<div class="clearfix"></div>
+		 </div>  
+		  <div class="index-banner">
+       	   <div class="wmuSlider example1">
+			   <div class="wmuSliderWrapper">
+				   <article style="position: absolute; width: 100%; opacity: 0;"> 
+				   	<div class="banner-wrap">
+				   	       	<div class="banner_center">
+				   		 		<h1>gmit</h1> 
+				   		 		<h2>i am <span>graphic & web designer</span></h2>
+				   		 		<h2>from Md Hasan</h2>
+				   		 		</div>
+				   		 </div>
+					</article>
+				   <article style="position: relative; width: 100%; opacity: 1;"> 
+				   	   	<div class="banner-wrap">
+				   	      <div class="banner_center">
+				   		 		<h1>Content here,</h1> 
+				   		 		<h2>kolkata,<span>graphic &  designer</span></h2>
+				   		 		<h2>Contrary</h2>
+				   		 		</div>
+				   		  </div>
+				  
+				 </div>
+				
+            </div>
+            <script src="js/jquery.wmuSlider.js"></script> 
+			  <script>
+       			$('.example1').wmuSlider();         
+   		     </script> 	           	      
+      </div>
+	 </div>     
+	</div>
+	<div class="content">
+		<div class="about-section" id="about" id="about">
+	<div class="container">
+		<div class="about-header">
+			<h3>about</h3>
+			<div class="about-imag">
+			<img src="images/pic-19.jpeg" alt=""/>
+			</div>
+			<div class="about-text">
+					<p>I AM MD HASAN I STUDY FROMGMIT B.Tech AT BRANCH CSE </p>
+					<P>I AM FROM KATIHAR,BIHAR</P>
+			</div>
+			
+		<div class="clearfix"></div>
+	</div>
+	<div class="arrow1">
+	<a href="#about" class="scroll"><img src="images/arrow1.png" alt=""/></a>
+					</div>
+	</div>
+	</div>
+	<!-- about-section-ends -->
+	<br/>
+	<br/>
+	<div class="REG-section" id="REG" id="REG">
+	   <div class="REG-header">
+		   <div align="center">
+			<h3>REGISTRATION</h3>
+			<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="bootstrap4/bootstrap.min.css">
+			
+				<title>Registration Form with Validation</title>
+			
+				<script>
+					function checkname() {
+						nameexp = /^[a-zA-Z ]{3,10}$/;
+						custname = document.getElementById("fname").value;
+						// alert(custname);
+			
+						if (nameexp.test(custname)) {
+							document.getElementById('nameerrormessage').style.visibility = 'hidden';
+						}
+						else {
+							document.getElementById('nameerrormessage').style.visibility = 'visible';
+							document.getElementById('nameerrormessage').innerText = "Enter Valid Name";
+						}
+					}
+			
+					function checkmobno() {
+						mobnoexp = /^[6789]\d{9}$/;
+			
+						/*
+						^       #Match the beginning of the string
+					   (7|8|9)  #Match a 7, 8 or 9 digit
+					   \d       #Match a digit (0-9 and anything else that is a "digit")
+					   {9}      #Repeat the previous "\d" 9 times (9 digits)
+					   $        #Match the end of the string
+						*/
+			
+						custmobno = document.getElementById("mobno").value;
+						//alert(custmobno);
+			
+						if (mobnoexp.test(custmobno)) {
+							document.getElementById('mobnoerrormessage').style.visibility = 'hidden';
+						}
+						else {
+							document.getElementById('mobnoerrormessage').innerText = "Enter Valid Mobile No";
+						}
+					}
+			
+					function checkemail() {
+
+			
+						emailexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+			
+						custemail = document.getElementById("email").value;
+						//alert(custemail);
+			
+						if (emailexp.test(custemail)) {
+							document.getElementById('emailerrormessage').style.visibility = 'hidden';
+						}
+						else {
+							document.getElementById('emailerrormessage').style.visibility = 'visible';
+							document.getElementById('emailerrormessage').innerText = "Enter Valid Email ID";
+						}
+					}
+			
+					function checkpassword() {
+						// at least one number, one lowercase and one uppercase letter
+						// at least six characters that are letters, numbers or the underscore
+						passwordexp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{4,8}$/;
+			
+						custpassword = document.getElementById("password").value;
+						// alert(custpassword);
+			
+						if (passwordexp.test(custpassword)) {
+							document.getElementById('passerrormessage').style.visibility = 'hidden';
+						}
+						else {
+							document.getElementById('passerrormessage').style.visibility = 'visible';
+							document.getElementById('passerrormessage').innerText = "Enter Valid Password";
+						}
+					}
+				</script>
+			</head>
+			<center>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-8 mx-auto">
+							<div class="card">
+								<div class="card-body" style="background-color: #eeefff">
+									<div class="mt-2 text-center">
+										<h2>Create Your Account</h2>
+									</div>
+
+			
+									<div class="mt-4">
+										
+										<form action="#" name='registration'>
+											<div class="form-group">
+												<label for="name" class="text-uppercase font-weight-bold text-primary">Name</label>
+												<input type="text" onblur="checkname()" class="form-control" id="fname"
+													name="fullname" placeholder="Enter Your Full Name" required="required">
+												<div class="text-danger font-weight-bold" id="nameerrormessage"></div>
+											</div>
+			
+											<div class="form-group">
+												<label for="email"
+													class="text-uppercase font-weight-bold text-primary">Email</label>
+												<input type="email" onblur="checkemail()" class="form-control" id="email"
+													name="email" placeholder="Enter Your Email" required="required">
+												<div class="text-danger font-weight-bold" id="emailerrormessage"></div>
+											</div>
+			
+											<div class="form-group">
+												<label for="mobileno" class="text-uppercase font-weight-bold text-primary">Mobile
+													No</label>
+												<input type="tel" onblur="checkmobno()" class="form-control" id="mobno" name="mobno"
+													placeholder="Enter Your Mobile No" required="required">
+												<div class="text-danger font-weight-bold" id="mobnoerrormessage"></div>
+											</div>
+			
+											<div class="form-group">
+												<label for="password" class="text-uppercase font-weight-bold">Password</label>
+												<input type="password" class="form-control" id="password" name="password"
+													placeholder="Enter password" required="required" onblur="checkpassword()">
+												<div>1 Digit,1 LowerCase,1 UpperCase. Min 4 - Max 8</div>
+												<div class="text-danger font-weight-bold" id="passerrormessage"></div>
+											</div>
+			
+											<button type="submit" class="btn btn-primary btn-block">Create Account</button>
+										</form>
+									</div>
+									</div> <!-- Form tag div -->
+								</div> <!-- Card Body End -->
+							</div> <!-- Card End -->
+						</div> <!-- Col alignment end -->
+					</div> <!-- Row End -->
+				</div> <!-- Container End -->
+			</div></center>
+			<br/>
+			<br/>
+	<div class="LOGIN-section" id="LOGIN">
+			<div class="container"> 
+			<div class="LOGIN-header">
+				<div align="center">
+				<h3>LOGIN</h3>
+				<form>
+					<label>USER ID</label>
+					<input type="text" maxlength="4" 
+					placeholder="ENTER UID"
+					required>
+		
+					<br/>
+					<br/>
+					<label>PASSWORD</label>
+					<input type="password">
+					<br />
+					<br />
+					<input type="submit"> &nbsp;&nbsp;
+					<input type="reset">
+					<br/>
+					<a href="New_user.html">New User</a> 
+				</form>
+			</div>
+
+			</div>
+			<br/>
+			<br/>
+			<div class="LOGIN-sectiongrids">
+				<div class="col-md-4 services-grid">
+					<img src="images/img1.png" alt=""/>
+					<h4>webdesign</h4>
+				</div>
+			
+				<div class="col-md-4 services-grid">
+					<img src="images/img3.png" alt=""/>
+					<h4>web development</h4>
+					
+				</div>
+				<div class="clearfix"></div>
+				<div class="arrow1">
+					<a href="#contact" class="scroll"><img src="images/arrow1.png" alt=""/></a>
+					</div>
+		</div>
+		</div>
+		</div>
+		<!-- services-section-ends -->
+	</div>
+	<div class="footer-section" id="contact" id="contact">
+			<div class="container"> 
+			<div class="contact-header">
+				<h3> contact</h3>
+					<p>MY COLLEGE LOCATION</p>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.3533355205604!2d88.43875281495606!3d22.37803348528325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a026d0097533aed%3A0xe18407a46f2e97f6!2sGargi%20Memorial%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1613672847227!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe
+			</div>
+			<div class="social-icon">
+				<a href="#"><i class="icon1"></i></a>
+				<a href="#"><i class="icon2"></i></a>
+				<a href="#"><i class="icon3"></i></a>
+				<a href="#"><i class="icon4"></i></a>
+				<a href="#"><i class="icon5"></i></a>
+				<a href="#"><i class="icon6"></i></a>
+				<a href="#"><i class="icon7"></i></a>
+				<a href="#"><i class="icon8"></i></a>
+			</div>
+			<div class="contact">
+				<form>
+					<div class="col-md-4 contactgrid">
+						<input type="text" class="text" value=" name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = ' name';}">
+					</div>
+					<div class="col-md-4 contactgrid">
+						<input type="text" class="text" value="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'email';}">
+					</div>
+					<div class="col-md-4 contactgrid">
+						<input type="text" class="text" value="phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'phone';}">
+					</div>
+					<div class="col-md-8 contactgrid1">
+						<textarea onfocus="if(this.value == 'Your Message') this.value='';" onblur="if(this.value == '') this.value='Your Message';" >Your Message</textarea>
+					</div>
+					<div class="col-md-4 contactgrid2">
+						<input type="submit" value="[send message]">
+					</div>
+				   <div class="clearfix"></div>
+				</form>
+
+			</div>
+			<div class="footer-bottom">
+
+					<p>&copy; 2021 Onepage . All rights  Reserved | Template by<a href="http://templatestock.com" target="target_blank">MD HASAN</a></p>
+
+					</div>
+					<script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</div>
+
+		</div>		
+	</div>
+	
+	
+</body>
+</html>
